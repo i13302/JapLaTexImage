@@ -1,0 +1,57 @@
+%全体の2段組.tex 
+\documentclass[twocolumn,10pt]{jarticle} 
+% \documentclass[a4paper,10pt]{jsarticle}
+\usepackage{listings,jlisting}
+\usepackage[dvipdfmx]{graphicx,color}
+
+\setlength{\columnsep}{3zw} 
+\title{\TeX とは} 
+\author{筱 更治} 
+\date{\today}
+
+
+%%==== ソースコードのレイアウト
+\lstset{%
+	language=C,
+	breaklines=true,%改行
+	numbers=left,%
+	numberstyle={\scriptsize},%
+	stepnumber=1,
+	numbersep=1zw,%
+	lineskip=-0.5ex,%
+	basicstyle=\ttfamily\footnotesize\fontsize{8}{8},
+	frame=single,%
+	columns=[l][l]{fullflexible},
+	tabsize=4,
+	xleftmargin=3zw,
+	xrightmargin=3zw, % 最所先生オリジナル
+	framexleftmargin=3zw, %ソースの左枠に行番号
+	commentstyle={\ttfamily \color[rgb]{0,0.5,0}},
+	keywordstyle={\bfseries \color[rgb]{1,0,0}},
+	stringstyle={\ttfamily \color[rgb]{0,0,1}},
+	literate= %特殊文字
+		*{\#include}{{\textcolor[rgb]{0.7,0.3,0.5}{\#include}}}{7}
+		 {\#define} {{\textcolor[rgb]{0.7,0.3,0.5}{\#define}}}{6}
+		 {\#if}     {{\textcolor[rgb]{0.7,0.3,0.5}{\#if}}}{2}
+		 {\#else}   {{\textcolor[rgb]{0.7,0.3,0.5}{\#else}}}{4}
+		 {\#endif}  {{\textcolor[rgb]{0.7,0.3,0.5}{\#endif}}}{5}
+		 {\#elif}   {{\textcolor[rgb]{0.7,0.3,0.5}{\#elif}}}{4}
+		 {\#ifndef} {{\textcolor[rgb]{0.7,0.3,0.5}{\#ifndef}}}{6}
+		 {\#ifdef}  {{\textcolor[rgb]{0.7,0.3,0.5}{\#ifdef}}}{5},
+}
+
+
+%%%%%%    TEXT START    %%%%%% 
+\begin{document} 
+\maketitle 
+\section{\TeX について}
+
+TeXはスタンフォード大学教授(数学)D.E.Knuth(19388～)による文書整形システムです。TeXは大抵「テフ」と読まれいます。TeXはワープロのたぐいと言えますが、より正しくは、1つのプログラム言語に近いものです。利用者によるマクロ命令によって機能を拡張することができます。今までは研究者の間でUNIX環境での稼働が一般的でしたが、今日では、個人がMacintoshOSやWindows9Xをインストールしたパーソナルコンピュータ上でTeXを動かすことが可能です。ネットワークで配布されているパッケージもありますが、最近では、安価にCD-ROMの形態で書籍に付録されているものもあり、ある程度の文法の理解は必要ですが、文書作成の種類や目的によっては、とても重宝なツールと言えます。……以下続く…… 
+
+\begin{lstlisting}[caption=FORMURAの定義]
+#define FORMULA  0 // 途中経過を表示
+\end{lstlisting}
+
+\lstinputlisting[caption=カラツバ法を実行 bignum\_kara()]{./src/bignum_kara.txt}
+
+\end{document}

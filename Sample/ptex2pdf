@@ -1,0 +1,4 @@
+#!/bin/bash
+
+docker run --rm -it -v $PWD:/workdir japlateximage ptex2pdf -l $2
+#docker run --rm -it -v $PWD:/workdir japlateximage /bin/bash

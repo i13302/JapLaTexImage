@@ -1,0 +1,10 @@
+Bool bignum_kara(BigNum *b)
+{
+    llint s = 1;
+    if (((b->nsz) << 1) > NMX){
+        return FALSE;
+    } // 桁溢れ
+
+    while(s < b->nsz) { s = s<<1; }   
+    return bignum_sq2(b, s);
+}
