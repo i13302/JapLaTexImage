@@ -1,0 +1,3 @@
+#!/bin/bash
+
+docker run --rm -it -v $PWD:/TEX japlateximage ptex2pdf -l $2
