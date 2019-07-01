@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker run --rm -it -v $PWD:/workdir paperist/alpine-texlive-ja ptex2pdf $1 $2
+docker run --rm -it -v $PWD:/workdir japlateximage ptex2pdf $1 $2
