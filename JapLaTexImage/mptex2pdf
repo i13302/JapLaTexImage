@@ -1,3 +1,4 @@
 #!/bin/bash
 
-docker run --rm -it -v $PWD:/workdir japlateximage ptex2pdf $1 $2
+docker run --rm -it -v $PWD:/workdir japlateximage \
+    sh -c "ptex2pdf -l $2 && ptex2pdf -l $2 && ptex2pdf -l $2"
