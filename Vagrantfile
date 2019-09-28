@@ -3,7 +3,7 @@ Vagrant.configure("2") do |config|
 	config.vm.box="generic/debian9"
 	config.vm.network "public_network",  bridge: 'Intel(R) 82578DC Gigabit Network Connection', mac: '080027740B41' , auto_config: true # eth1
 	config.vm.synced_folder "./JapLaTexImage", "/home/vagrant/JapLaTexImage"
-	
+	config.vm.synced_folder "./work",          "/home/vagrant/work"
 	
 	config.vm.define "JapLaTex" do |host|
 	end
@@ -17,9 +17,7 @@ Vagrant.configure("2") do |config|
 	
 	config.vm.provision "shell", inline: <<-SHELL
 		cd /home/vagrant/JapLaTexImage/Docker && bash dockerbuild.sh
-		cd /home/vagrant && mkdir bin && cd bin
-		ln -s /home/vagrant/JapLaTexImage/mptex2pdf mptex2pdf
-		hash -r 
+		cd /usr/local/bin/ && ln -s /home/vagrant/JapLaTexImage/mptex2pdf mptex2pdf
 		cd /home/vagrant/JapLaTexImage/Sample && mptex2pdf -l Sample.tex
 	SHELL
 end
