@@ -1,0 +1,13 @@
+Vagrant.configure("2") do |config|
+	config.vm.box = "generic/alpine38"
+	config.vm.synced_folder ".", "/home/vagrant/work", disabled: true
+	config.vbguest.auto_update = true
+	config.vm.provision "shell", inline: <<-SHELL
+		echo http://dl-3.alpinelinux.org/alpine/edge/main >> /etc/apk/repositories
+		echo http://dl-3.alpinelinux.org/alpine/edge/community >> /etc/apk/repositories
+		apk update
+		apk add docker
+		rc-update add docker boot
+		service docker start
+	SHELL
+end
