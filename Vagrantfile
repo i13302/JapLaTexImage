@@ -18,6 +18,5 @@ Vagrant.configure("2") do |config|
 	config.vm.provision "shell", inline: <<-SHELL
 		cd /home/vagrant/JapLaTexImage/Docker && bash dockerbuild.sh
 		cd /usr/local/bin/ && ln -s /home/vagrant/JapLaTexImage/mptex2pdf mptex2pdf
-		cd /home/vagrant/JapLaTexImage/Sample && mptex2pdf -l Sample.tex
 	SHELL
 end
