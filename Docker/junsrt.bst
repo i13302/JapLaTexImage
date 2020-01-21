@@ -1024,13 +1024,9 @@ FUNCTION {manual}
 FUNCTION {mastersthesis}
 { output.bibitem
   format.authors "author" output.check
-  % edit by i13302 START
-  %new.block
-  % edit by i13302 END
+  new.block
   format.title "title" output.check
-  % edit by i13302 START
-  %new.block
-  % edit by i13302 END
+  new.block
 % edit by i13302 START
 % "Master's thesis" format.thesis.type output.nonnull
   "修士論文" format.thesis.type output.nonnull
@@ -1047,13 +1043,9 @@ FUNCTION {mastersthesis}
 FUNCTION {bachelorthesis}
 { output.bibitem
   format.authors "author" output.check
-  % edit by i13302 START
-  %new.block
-  % edit by i13302 END
+  new.block
   format.title "title" output.check
-  % edit by i13302 START
-  %new.block
-  % edit by i13302 END
+  new.block
   "学士論文" format.thesis.type output.nonnull
   school "school" output.check
   address output
