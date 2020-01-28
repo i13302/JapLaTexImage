@@ -3,9 +3,9 @@
 #docker run --rm -it -v $PWD:/workdir japlateximage \
 if [ -z "$3" ]
 then 
-    docker run --rm -v $PWD:/workdir japlateximage \
+    docker run --rm -v $PWD:/workdir -u $(id -u):$(id -g) japlateximage \
         sh -c "ptex2pdf -l $2 && ptex2pdf -l $2 && ptex2pdf -l $2"
 else
-    docker run --rm -v $PWD:/workdir japlateximage \
+    docker run --rm -v $PWD:/workdir -u $(id -u):$(id -g) japlateximage \
         sh -c "ptex2pdf -l $2 && pbibtex $3 && ptex2pdf -l $2 && ptex2pdf -l $2"
 fi	
