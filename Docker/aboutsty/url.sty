@@ -219,6 +219,9 @@
 \DeclareOption{hyphens}{\def\do@url@hyp{\do\-}}% allow breaks after hyphens
 \DeclareOption{obeyspaces}{\let\Url@ObeySp\relax}% a flag for later
 \DeclareOption{spaces}{\def\Url@sppen{\UrlBreakPenalty}}
+% appned by i13302 START
+\DeclareOption{sharp}{\def\do@url@shp{\do\#}}
+% appned by i13302 END
 \DeclareOption{LY1}{}
 \DeclareOption{T1}{}
 \DeclareOption{allowmove}{\let\Url@moving\@empty}
@@ -226,10 +229,6 @@
   \def\UrlTildeSpecial{\do\~{\raise.2ex\hbox{\m@th$\scriptstyle\sim$}}}
   \let\Url@force@Tilde\UrlTildeSpecial
 }
-
-% appned by i13302 START
-\DeclareOption{sharp}{\def\do@url@shp{\do\#}}
-% appned by i13302 END
 
 \ProcessOptions\relax
 \ifx\Url@ObeySp\relax % [obeyspaces] was declared
