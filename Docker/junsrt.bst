@@ -363,20 +363,23 @@ FUNCTION {n.dashify}
 }
 FUNCTION {format.date}
 
-{ year empty$
-    { month empty$
-	{ "" }
-	{ "there's a month but no year in " cite$ * warning$
-	  month
-	}
-      if$
-    }
-    { month empty$
-	'year
-	{ month " " * year * }
-      if$
-    }
-  if$
+{ year
+% edit by i13302 START
+%{ year empty$
+%    { month empty$
+%	{ "" }
+%	{ "there's a month but no year in " cite$ * warning$
+%	  month
+%	}
+%      if$
+%    }
+%    { month empty$
+%	'year
+%	{ month " " * year * }
+%      if$
+%    }
+%  if$
+% edit by i13302 END
 }
 
 FUNCTION {format.btitle}
@@ -1062,7 +1065,10 @@ FUNCTION {misc}
   title howpublished new.block.checkb
   format.title output
   howpublished new.block.checka
-  howpublished output
+  % appned by i13302 START
+  % howpublished output
+  "\newline " howpublished * output
+  % appned by i13302 END
   format.date output
 
   new.block

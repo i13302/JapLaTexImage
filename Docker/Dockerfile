@@ -12,8 +12,8 @@ COPY ["jlisting.sty","/usr/local/texlive/2017/texmf-dist/tex/latex/listings/"]
 RUN ["mkdir","-p","/usr/local/texlive/texmf-local/tex/latex/originaddon"]
 COPY ["./aboutsty/*.sty","/usr/local/texlive/texmf-local/tex/latex/originaddon/"]
 
+RUN mktexlsr
+
 # Original bst
 COPY ["junsrt.bst","/usr/local/texlive/2017/texmf-dist/pbibtex/bst/junsrt.bst"]
 
-# RUN cat /usr/local/texlive/2017/texmf-dist/tex/latex/listings/listings.sty | grep -i version
-RUN mktexlsr

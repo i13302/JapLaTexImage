@@ -226,6 +226,11 @@
   \def\UrlTildeSpecial{\do\~{\raise.2ex\hbox{\m@th$\scriptstyle\sim$}}}
   \let\Url@force@Tilde\UrlTildeSpecial
 }
+
+% appned by i13302 START
+\DeclareOption{sharp}{\def\do@url@shp{\do\#}}
+% appned by i13302 END
+
 \ProcessOptions\relax
 \ifx\Url@ObeySp\relax % [obeyspaces] was declared
   \begingroup \lccode`+=32 \lowercase
