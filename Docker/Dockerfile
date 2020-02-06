@@ -12,6 +12,9 @@ COPY ["jlisting.sty","/usr/local/texlive/2017/texmf-dist/tex/latex/listings/"]
 RUN ["mkdir","-p","/usr/local/texlive/texmf-local/tex/latex/originaddon"]
 COPY ["./aboutsty/*.sty","/usr/local/texlive/texmf-local/tex/latex/originaddon/"]
 
+RUN ["mkdir","-p","/usr/local/texlive/texmf-local/tex/latex/bxwareki"]
+COPY ["./bxwareki/*","/usr/local/texlive/texmf-local/tex/latex/bxwareki/"]
+
 RUN mktexlsr
 
 # Original bst
