@@ -803,14 +803,15 @@ FUNCTION {article}
     { journal emphasize "journal" output.check
 
       format.vol.num.pages output
-      format.date "year" output.check
 
 }
     { format.article.crossref output.nonnull
       format.pages output
     }
   if$
-
+% edit by i13302 START
+  format.date "year" output.check
+% edit by i13302 END
   new.block
   note output
   fin.entry
@@ -1072,7 +1073,10 @@ FUNCTION {misc}
   format.date output
 
   new.block
+  % appned by i13302 START
   note output
+  %"\newline" note * output
+  % appned by i13302 END
   fin.entry
   empty.misc.check
 }
