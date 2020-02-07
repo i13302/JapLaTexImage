@@ -1,6 +1,8 @@
 %全体の2段組.tex 
-% \documentclass[twocolumn,10pt]{jarticle} 
-\documentclass[twocolumn,10pt]{jreport}
+
+% どちらでも確認
+\documentclass[twocolumn,10pt]{jarticle} 
+% \documentclass[twocolumn,10pt]{jreport}
 
 \usepackage{listings,jlisting}
 \usepackage[dvipdfmx]{graphicx,color}
@@ -51,8 +53,15 @@
 %%%%%%    TEXT START    %%%%%% 
 \begin{document} 
 \maketitle 
-\section{\TeX について}
-TeXはスタンフォード大学教授(数学)D.E.Knuth(19388～)による文書整形システムです\cite{TeX入門}．
+\section{はじめに}
+\TeX はスタンフォード大学教授(数学)D.E.Knuth(1938～)による文書整形システムです\cite{TeX入門}．
+Dockerにすることで，柔軟にキメラな \TeX 環境を作成できます．
+\par 
+aboutstyディレクトリにstyファイルを配置すると，Docker build時に読み込みます．
+
+\section{コンパイル}
+同梱のmptex2pdfスクリプトにより，3回通るようにしています．
+引数を2つ指定すると，bibtex対応でコンパイルします．
 
 \section{URL表示}
 urlパッケージを導入しています．\url{https://google.com}．
@@ -74,7 +83,7 @@ TeX LiveがVer 2017なので，BXwarekiパッケージ\cite{bxwareki}にて，�
 	\item ``\textbackslash\textbackslash warekitoday'' \zr \warekitoday
 \end{enumerate}
 
-\section{参考文献}
+\section{参考文献/関連図書}
 bibtexにて，``junsrt.bst''ファイルを改修しています．
 \begin{enumerate}
 	\item ``@misc''表示の際に，url前に改行
@@ -83,7 +92,14 @@ bibtexにて，``junsrt.bst''ファイルを改修しています．
 	\item ``Master's thesis'' \zr ``修士論文''
 \end{enumerate}
 
-
+\subsection{epsファイル}
+昔懐かしのepsファイルにも対応しています(図\ref{fig:epsSample})．
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=6cm]{./fig/circle.eps}
+	\caption{epsSample\cite{EPSFiles}}
+	\label{fig:epsSample}
+\end{figure}
 
 
 \bibliography{bibtex} % 参考文献

@@ -1,5 +1,7 @@
 FROM paperist/alpine-texlive-ja:2017
 
+RUN apk add --update ghostscript && tlmgr update --self
+
 WORKDIR /workdir
 
 
