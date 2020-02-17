@@ -1080,6 +1080,26 @@ FUNCTION {misc}
   fin.entry
   empty.misc.check
 }
+
+FUNCTION {mymisc}
+{ output.bibitem
+  format.authors output
+  title howpublished new.block.checkb
+  format.title output
+  howpublished new.block.checka
+  % appned by i13302 START
+  howpublished output
+  % "\newline " howpublished * output
+  % appned by i13302 END
+  format.date output
+  new.block
+  % appned by i13302 START
+  note output
+  %"\newline" note * output
+  % appned by i13302 END
+  fin.entry
+  empty.misc.check
+}
 FUNCTION {phdthesis}
 { output.bibitem
   format.authors "author" output.check
