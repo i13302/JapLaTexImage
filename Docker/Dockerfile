@@ -5,7 +5,7 @@ RUN apk add --update ghostscript && tlmgr update --self
 WORKDIR /workdir
 
 
-# Sai listings
+# Custom listings
 COPY ["lstmisc.sty","/usr/local/texlive/2017/texmf-dist/tex/latex/listings/"]
 # Japanese listings
 COPY ["jlisting.sty","/usr/local/texlive/2017/texmf-dist/tex/latex/listings/"]
