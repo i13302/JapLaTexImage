@@ -5,15 +5,14 @@
 \newblock \newline \url{https://www.juen.ac.jp/math/nakagawa/texguide.html}.
 \newblock (Accessed on 2020/02/06).
 
+\bibitem{EPSFiles}
+``EPS Files''.
+\newblock \url{https://people.sc.fsu.edu/~jburkardt/data/eps/eps.html}.
+\newblock (Accessed on 2020/02/07).
+
 \bibitem{bxwareki}
 ``CTAN: Package bxwareki''.
 \newblock \newline \url{https://ctan.org/pkg/bxwareki}.
 \newblock (Accessed on 2020/02/06).
-
-\bibitem{EPSFiles}
-``EPS Files''.
-\newblock \newline
-  \url{https://people.sc.fsu.edu/~jburkardt/data/eps/eps.html}.
-\newblock (Accessed on 2020/02/07).
 
 \end{thebibliography}

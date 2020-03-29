@@ -4,15 +4,15 @@ The top-level auxiliary file: Sample.aux
 The style file: junsrt.bst
 Database file #1: bibtex.bib
 You've used 3 entries,
-            2264 wiz_defined-function locations,
-            549 strings with 4296 characters,
-and the built_in function-call counts, 467 in all, are:
+            2284 wiz_defined-function locations,
+            550 strings with 4302 characters,
+and the built_in function-call counts, 466 in all, are:
 = -- 30
 > -- 3
 < -- 0
 + -- 3
 - -- 0
-* -- 11
+* -- 10
 := -- 45
 add.period$ -- 9
 call.type$ -- 3

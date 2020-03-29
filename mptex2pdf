@@ -1,6 +1,9 @@
 #!/bin/bash
 
-#docker run --rm -it -v $PWD:/workdir japlateximage \
+#
+# Docker Imageを用いて，引数のTeXファイルをコンパイルする
+#
+
 if [ -z "$3" ]
 then 
     docker run --rm -v $PWD:/workdir -u $(id -u):$(id -g) japlateximage \
