@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.7.1-161114-2.6 (utf8.euc) (TeX Live 2017) (preloaded format=platex 2018.5.5)  29 MAR 2020 10:44
+This is e-pTeX, Version 3.14159265-p3.7.1-161114-2.6 (utf8.euc) (TeX Live 2017) (preloaded format=platex 2018.5.5)  30 MAR 2020 06:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -317,10 +317,6 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 127.
-LaTeX Font Info:    Font shape `JT1/utfj/m/5' will be
-(Font)              scaled to size 9.6222pt on input line 135.
-LaTeX Font Info:    Font shape `JY1/utfj/m/5' will be
-(Font)              scaled to size 9.6222pt on input line 135.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
@@ -352,14 +348,19 @@ File: lstlang3.sty 2015/06/04 1.6 listings language file
 (/usr/local/texlive/2017/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 )
+LaTeX Font Info:    Font shape `JT1/utfj/m/5' will be
+(Font)              scaled to size 9.6222pt on input line 140.
+LaTeX Font Info:    Font shape `JY1/utfj/m/5' will be
+(Font)              scaled to size 9.6222pt on input line 140.
+
 (./Sample.bbl) [3] (./Sample.aux) ) 
 Here is how much of TeX's memory you used:
- 5899 strings out of 495113
- 80046 string characters out of 6184444
- 232639 words of memory out of 5000000
- 9311 multiletter control sequences out of 15000+600000
+ 5908 strings out of 495113
+ 80121 string characters out of 6184444
+ 232805 words of memory out of 5000000
+ 9320 multiletter control sequences out of 15000+600000
  13850 words of font info for 68 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 41i,7n,69p,304b,1967s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,7n,69p,304b,1973s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Sample.dvi (3 pages, 14712 bytes).
+Output written on Sample.dvi (3 pages, 15420 bytes).

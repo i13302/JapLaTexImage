@@ -128,9 +128,14 @@ TeX LiveがVer 2017なので，BXwarekiパッケージ\cite{bxwareki}にて，�
 	\item ``\textbackslash\textbackslash warekitoday'' \zr \warekitoday
 \end{enumerate}
 
-\section{旧自体対応}
+\section{旧字体対応}
 OTFパッケージにて，対応しています．
 {
+	\begin{lstlisting}[language=TeX,caption=旧字体]
+\newcommand{\toku}{\UTF{5FB7}}
+ほげ \toku ほげ
+	\end{lstlisting}
+
 	\newcommand{\toku}{\UTF{5FB7}}
 	ほげ \toku ほげ
 }
